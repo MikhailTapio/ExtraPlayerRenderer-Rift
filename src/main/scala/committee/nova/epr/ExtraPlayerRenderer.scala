@@ -17,11 +17,9 @@ object ExtraPlayerRenderer {
 }
 
 class ExtraPlayerRenderer extends BootstrapListener with KeybindHandler {
-
   override def processKeybinds(): Unit = {
     if (!InputMappings.isKeyDown(GLFW.GLFW_KEY_LEFT_ALT) && !InputMappings.isKeyDown(GLFW.GLFW_KEY_RIGHT_ALT)) return
     if (!InputMappings.isKeyDown(GLFW.GLFW_KEY_P)) return
-    //if (!openCfg.isPressed) return
     Minecraft.getInstance().displayGuiScreen(new GuiRenderConfig)
   }
 

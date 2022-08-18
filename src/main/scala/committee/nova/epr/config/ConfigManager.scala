@@ -21,7 +21,7 @@ object ConfigManager {
       generateCfg()
       return
     }
-    cfg = Try(GSON.fromJson(new FileReader(cfgFile), classOf[Configuration])).getOrElse(Configuration.getInstance())
+    cfg = Try(GSON.fromJson(new FileReader(cfgFile), classOf[Configuration])).getOrElse(Configuration.getDefaultInstance)
   }
 
   def writeConfigFile(cfg: Configuration): Unit = {
@@ -39,7 +39,7 @@ object ConfigManager {
   private def generateCfg(): Unit = {
     try {
       Files.createFile(cfgFile.toPath)
-      cfg = Configuration.getInstance()
+      cfg = Configuration.getDefaultInstance
       FileUtils.write(cfgFile, GSON.toJson(cfg), StandardCharsets.UTF_8)
     } catch {
       case e: Exception => e.printStackTrace()

@@ -40,14 +40,14 @@ class GuiRenderConfig extends GuiScreen {
       val oldP = (ScreenUtils.posX, ScreenUtils.posY)
       ScreenUtils.posX = deltaX.floatValue + oldP._1
       ScreenUtils.posY = deltaY.floatValue + oldP._2
-      result = true;
+      result = true
     }
     result
   }
 
   override def charTyped(typedChar: Char, keyCode: Int): Boolean = {
     if (Character.toLowerCase(typedChar) != 'r' || !ScreenUtils.isAltKeyDown) return super.charTyped(typedChar, keyCode)
-    val cfg = Configuration.getInstance()
+    val cfg = Configuration.getDefaultInstance
     ScreenUtils.posX = cfg.posX
     ScreenUtils.posY = cfg.posY
     ScreenUtils.scale = cfg.scale

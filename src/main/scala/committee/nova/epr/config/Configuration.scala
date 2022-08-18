@@ -3,7 +3,7 @@ package committee.nova.epr.config
 import com.google.gson.annotations.SerializedName
 
 object Configuration {
-  def getInstance(): Configuration = new Configuration(50.0F, 320.0F, 80.0F, 5.0F)
+  def getDefaultInstance: Configuration = new Configuration(50.0F, 320.0F, 80.0F, 5.0F)
 }
 
 class Configuration {

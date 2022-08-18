@@ -7,7 +7,6 @@ import net.minecraft.client.renderer.{GlStateManager, OpenGlHelper, RenderHelper
 import org.dimdev.rift.listener.client.OverlayRenderer
 
 class Overlay extends OverlayRenderer {
-
   override def renderOverlay(): Unit = {
     val mc = Minecraft.getInstance()
     val player = mc.player
@@ -17,7 +16,6 @@ class Overlay extends OverlayRenderer {
     GlStateManager.scalef(-scale, scale, scale)
     GlStateManager.rotatef(180.0F, 0.0F, 0.0F, 1.0F)
     GlStateManager.rotatef(player.rotationYaw + yawOffset, 0.0F, 1.0F, 0.0F)
-
     GlStateManager.rotatef(135.0F, 0.0F, 1.0F, 0.0F)
     RenderHelper.enableStandardItemLighting()
     GlStateManager.rotatef(-135.0F, 0.0F, 1.0F, 0.0F)

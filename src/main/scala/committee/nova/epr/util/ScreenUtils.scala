@@ -11,6 +11,5 @@ object ScreenUtils {
   var yawOffset: Float = ConfigManager.getCfg.yawOffset
 
   def isAltKeyDown: Boolean = InputMappings.isKeyDown(56) || InputMappings.isKeyDown(184)
-
   def getPartialTick: Float = Minecraft.getInstance().getRenderPartialTicks
 }
