@@ -1,0 +1,18 @@
+{
+  "id": "epr",
+  "name": "ExtraPlayerRenderer-Rift",
+  "authors": [
+    "TartaricAcid",
+    "Tapio"
+  ],
+  "listeners": [
+    {
+      "class": "committee.nova.epr.ExtraPlayerRenderer",
+      "side": "client"
+    },
+    {
+      "class": "committee.nova.epr.Overlay",
+      "side": "client"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "gui.epr.cfg.text": "Usage:\nLeft Drag: Rotate\nRight Drag: Translate\nSlide Wheel: Scale\nAlt + R: Reset\n\n[Press Esc To Exit]"
+}
