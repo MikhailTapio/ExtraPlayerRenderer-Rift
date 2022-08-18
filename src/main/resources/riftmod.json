@@ -14,5 +14,6 @@
       "class": "committee.nova.epr.Overlay",
       "side": "client"
     }
-  ]
+  ],
+  "description": "Adds an extra player renderer."
 }
